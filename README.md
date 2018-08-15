@@ -1,7 +1,5 @@
-================
-Python exercies
-================
+# Python exercies
 
-# Towers of Hanoi - `https://github.com/LuvPython/Python-exercises/blob/master/towers-of-hanoi/solution.py` -
-# Eight Queen puzzle with for loops only - `https://github.com/LuvPython/Python-exercises/blob/master/eight-queens/eight-queens-problem-v1.py` - 
-# Eight Queen puzzle using recursion - `https://github.com/LuvPython/Python-exercises/blob/master/eight-queens/eight-queens-problem-v2.py` - 
+##### 1. Towers of Hanoi - `https://github.com/LuvPython/Python-exercises/blob/master/towers-of-hanoi/solution.py`
+##### 2. Eight Queen puzzle with for loops only - `https://github.com/LuvPython/Python-exercises/blob/master/eight-queens/eight-queens-problem-v1.py`
+##### 3. Eight Queen puzzle using recursion - `https://github.com/LuvPython/Python-exercises/blob/master/eight-queens/eight-queens-problem-v2.py`
