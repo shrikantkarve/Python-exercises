@@ -1,6 +1,6 @@
-Python exercies
+# Python exercies
 
-#####Towers of Hanoi
-#####Eight Queen puzzle
+Towers of Hanoi
+Eight Queen puzzle
 `Only for loops`
 `Using recursion`
