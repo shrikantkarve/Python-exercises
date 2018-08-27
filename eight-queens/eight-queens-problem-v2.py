@@ -1,10 +1,11 @@
-# This is eight queens problem
-# https://en.wikipedia.org/wiki/Eight_queens_puzzle
+"""
+This is eight queens problem
+https://en.wikipedia.org/wiki/Eight_queens_puzzle
 
-# This employs recursive approach to finding the solutions to
-# eight queen puzzle
-# Gives all 92 solutions
-
+This employs recursive approach to finding the solutions to
+eight queen puzzle
+Gives all 92 solutions
+"""
 import sys
 
 solutions = []
@@ -12,10 +13,10 @@ board_size = 0
 
 
 def strike_cells_queen(qcell, matrix):
-    '''
+    """
     This function removes the cells that can be reached by queen
     in qcell
-    '''
+    """
     row = qcell[0]
     column = qcell[1]
     exclusion_cells = []
@@ -27,11 +28,25 @@ def strike_cells_queen(qcell, matrix):
     return [x for x in matrix if x not in exclusion_cells]
 
 
+def draw_board():
+    for brd in solutions:
+        board = ""
+        for row in range(1,board_size+1):
+            for col in range(1,board_size+1):
+                if [row,col] in brd:
+                    board += "Q"
+                else:
+                    board += "-"
+                board += " "
+            board += "\n"
+        print board
+
+
 def get_queen_position(valid_cells, column, current_queen_set):
-    '''
+    """
     This function is a recursive function that reaches the last queen
     and records the solution when reached
-    '''
+    """
     if len(valid_cells) == 0:
         return
     for q in [[x, column] for x in range(1, board_size+1)
@@ -45,7 +60,7 @@ def get_queen_position(valid_cells, column, current_queen_set):
         else:
             valid_cells = strike_cells_queen(q, valid_cells)
             current_queen_set.append(q)
-            sols = get_queen_position(valid_cells, column+1, current_queen_set)
+            get_queen_position(valid_cells, column+1, current_queen_set)
             current_queen_set.pop()
             valid_cells = backup_valid_cells
 
@@ -55,7 +70,8 @@ def main():
     global solutions
     if len(sys.argv) != 2:
         print "Provide the number of columns on board as parameters"
-        exit()
+        exit(1)
+
     board_size = int(sys.argv[1])
     candidate_cells = []
     for column in range(1, board_size+1):
@@ -64,7 +80,7 @@ def main():
     get_queen_position(candidate_cells, 1, [])
     for sol in solutions:
         print sol
-
+    draw_board()
 
 if __name__ == "__main__":
     main()
