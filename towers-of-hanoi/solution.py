@@ -7,7 +7,7 @@
 # placing it on top of another stack or on an empty rod.
 # 3. No disk may be placed on top of a smaller disk.
 
-src = range(1, 6)
+src = list(range(1, 6))
 tgt = []
 standby = []
 
@@ -23,13 +23,13 @@ def move_elem(A, B, C, level):
 
 
 def print_pegs():
-    print src
-    print tgt
-    print standby
+    print(src)
+    print(tgt)
+    print(standby)
 
 
-print "Before movement:"
+print("Before movement:")
 print_pegs()
 move_elem(src, tgt, standby, len(src))
-print "After movement:"
+print("After movement:")
 print_pegs()
