@@ -1,2 +1,6 @@
 env/*
 .tox/*
+Scripts
+Lib
+Include
+pyvenv.cfg
