@@ -1,5 +1,6 @@
 #from collections.abc import Iterable
 
+
 def flatten(inp_list,ret):
     try:
         #if isinstance(inp_list, Iterable):
