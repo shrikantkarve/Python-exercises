@@ -45,10 +45,13 @@ def main():
     args = parser.parse_args()
     print(args)
 
+    high = 1
     for i in range(1,args.max_num+1):
         seq_dict[i] = get_seq(i)
         seq_len[i] = len(seq_dict[i]) 
-        highest[i] = max([seq_len[j] for j in range(1,i+1)])
+        if seq_len[i] >= high:
+            high = seq_len[i]
+        highest[i] = high 
         if args.verbose:
             print("sequence for ",i,":",",".join(map(str,seq_dict[i])))
     if args.verbose:
