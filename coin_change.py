@@ -7,7 +7,7 @@
 # to give a predefine number of cents.
 import operator
 
-cents = 31
+cents = 33
 
 coins = {
         'quarter': 25,
