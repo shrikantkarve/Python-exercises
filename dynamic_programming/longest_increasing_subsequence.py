@@ -46,3 +46,26 @@ def longest_increasing_subsequence(arr: List[int]) -> Tuple[int, List[int]]:
     seq.reverse()
 
     return max_len, seq
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1 and sys.argv[1] in ("-t", "--test", "test"):
+        import os
+        # Ensure project root is on sys.path so tests can import package modules
+        project_root = os.path.dirname(os.path.dirname(__file__))
+        if project_root not in sys.path:
+            sys.path.insert(0, project_root)
+        try:
+            import pytest
+        except Exception:
+            print("pytest not installed; install with: python3 -m pip install pytest")
+            sys.exit(1)
+        sys.exit(pytest.main(["-q", "tests/test_lis.py"]))
+
+    sample = [10, 9, 2, 5, 3, 7, 101, 18]
+    length, seq = longest_increasing_subsequence(sample)
+    print("Input:", sample)
+    print("LIS length:", length)
+    print("LIS:", seq)
