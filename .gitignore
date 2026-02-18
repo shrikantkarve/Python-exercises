@@ -1,7 +1,24 @@
-env/*
-.tox/*
-Scripts
-Lib
-Include
+env/
+.tox/
+Scripts/
+Lib/
+Include/
 pyvenv.cfg
 linear_regression_A.gif
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
