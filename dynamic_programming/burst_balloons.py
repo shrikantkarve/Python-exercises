@@ -24,7 +24,9 @@ Output: 10
 """
 
 
-def max_coins(nums: list[int]) -> int:
+from typing import List
+
+def max_coins(nums: List[int]) -> int:
     """
     Finds the maximum coins obtainable by bursting all balloons.
 

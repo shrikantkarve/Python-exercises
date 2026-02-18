@@ -18,7 +18,9 @@ Output: 0
 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 """
 
-def max_product(nums: list[int]) -> int:
+from typing import List
+
+def max_product(nums: List[int]) -> int:
     """
     Finds the contiguous subarray within an array (containing at least one number) 
     which has the largest product.

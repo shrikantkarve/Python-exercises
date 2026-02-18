@@ -21,7 +21,9 @@ Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
 Output: false
 """
 
-def word_break(s: str, wordDict: list[str]) -> bool:
+from typing import List
+
+def word_break(s: str, wordDict: List[str]) -> bool:
     """
     Determines if the string s can be segmented into a space-separated sequence 
     of one or more dictionary words.
