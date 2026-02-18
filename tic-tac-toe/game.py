@@ -8,6 +8,7 @@ import random
 
 
 def check_box():
+    pass
 
 # Class for custom button
 class cButton(Button):

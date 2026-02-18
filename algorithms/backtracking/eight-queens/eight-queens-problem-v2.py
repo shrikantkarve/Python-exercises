@@ -39,7 +39,7 @@ def draw_board():
                     board += "-"
                 board += " "
             board += "\n"
-        print board
+        print(board)
 
 
 def get_queen_position(valid_cells, column, current_queen_set):
@@ -69,7 +69,7 @@ def main():
     global board_size
     global solutions
     if len(sys.argv) != 2:
-        print "Provide the number of columns on board as parameters"
+        print("Provide the number of columns on board as parameters")
         exit(1)
 
     board_size = int(sys.argv[1])
@@ -79,7 +79,7 @@ def main():
             candidate_cells.append([row, column])
     get_queen_position(candidate_cells, 1, [])
     for sol in solutions:
-        print sol
+        print(sol)
     draw_board()
 
 if __name__ == "__main__":

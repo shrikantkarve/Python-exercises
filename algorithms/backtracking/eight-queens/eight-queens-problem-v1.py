@@ -9,7 +9,7 @@
 # 3. Put time and memory usages, and benchmark solution
 
 candidate_cells = []
-global candidate_cells
+
 
 def find_queen_position(cell_subset):
    return cell_subset[0]
@@ -68,7 +68,7 @@ for q1 in [[x,1] for x in range(1,9)]:
                             for q8 in [[x,8] for x in range(1,9) if [x,8] in candidate_cells]:
                                 if len(candidate_cells) == 0:
                                     break
-                                print [q1, q2, q3, q4, q5, q6, q7, q8]
+                                print([q1, q2, q3, q4, q5, q6, q7, q8])
                             candidate_cells = q7_candidate_cells
                         candidate_cells = q6_candidate_cells
                     candidate_cells = q5_candidate_cells
