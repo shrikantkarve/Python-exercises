@@ -14,7 +14,7 @@ highest = {}
 
 def get_seq(num):
 
-    global seq_dict
+
     start_num = num
     sequence = [num]
     #sequence.append(num)

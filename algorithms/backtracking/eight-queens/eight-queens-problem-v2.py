@@ -67,7 +67,7 @@ def get_queen_position(valid_cells, column, current_queen_set):
 
 def main():
     global board_size
-    global solutions
+
     if len(sys.argv) != 2:
         print("Provide the number of columns on board as parameters")
         exit(1)
